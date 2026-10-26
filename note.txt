@@ -14,3 +14,6 @@ Frontend Setup =>
 
   ### git ignore aita mainly github a kono data share korte na chaile oi khane oi file ta dekhai dile e hobe 
   .gitignore then file name serial wise
+
+project run command npm run start
+  project run port: http://localhost:3000/
