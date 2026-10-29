@@ -78,6 +78,14 @@ export const signup = async (req, res) => {
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
+  //check email and password field empty or filled
+
+  if (!email || !password) {
+    return res
+      .status(400)
+      .json({ message: "Email and Password are required!" });
+  }
+
   try {
     const user = await User.findOne({ email });
     if (!user) return res.status(400).json({ message: "Invalid credentials!" });
