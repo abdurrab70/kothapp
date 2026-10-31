@@ -1,4 +1,5 @@
 import express from "express";
+import cookieParsar from "cookie-parser";
 import dotenv from "dotenv";
 import path from "path";
 
@@ -13,6 +14,7 @@ const __dirname = path.resolve();
 const Port = ENV.PORT || 3000;
 
 app.use(express.json()); //req.body
+app.use(cookieParsar());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messagesRoutes);
