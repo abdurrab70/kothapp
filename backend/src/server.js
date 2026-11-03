@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import path from "path";
 
 import authRoutes from "./routes/auth.route.js";
-import messagesRoutes from "./routes/message.route.js";
+import messageRoutes from "./routes/message.route.js";
 import { connectDB } from "./lib/db.js";
 import { ENV } from "./lib/env.js";
 
@@ -17,7 +17,7 @@ app.use(express.json()); //req.body
 app.use(cookieParsar());
 
 app.use("/api/auth", authRoutes);
-app.use("/api/messages", messagesRoutes);
+app.use("/api/messages", messageRoutes);
 
 //make ready for deployment
 if (ENV.NODE_ENV === "production") {
@@ -29,6 +29,6 @@ if (ENV.NODE_ENV === "production") {
 }
 
 app.listen(Port, () => {
-  console.log(`Server running on port: 🚀 ${Port}`);
+  console.log(`🚀🚀🚀 Server running on port: ${Port}`);
   connectDB();
 });
