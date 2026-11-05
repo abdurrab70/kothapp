@@ -28,10 +28,11 @@ if (ENV.NODE_ENV === "production") {
   });
 }
 
+//default route on https://kothapp.onrender.com/
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
-    message: "Kotha API is running 🚀",
+    message: "Connect API is running 🚀",
   });
 });
 
