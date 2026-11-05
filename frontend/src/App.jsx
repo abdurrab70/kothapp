@@ -1,8 +1,9 @@
-
 function App() {
   return (
-    <div>Connect App</div>
-  )
+    <>
+      <h1 class="text-3xl font-bold underline text-center">Hello world!</h1>
+    </>
+  );
 }
 
-export default App
+export default App;
