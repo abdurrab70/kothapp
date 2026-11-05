@@ -32,7 +32,7 @@ if (ENV.NODE_ENV === "production") {
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
-    message: "Connect API is running 🚀",
+    message: "Connect app API is running 🚀",
   });
 });
 
